@@ -1,0 +1,52 @@
+let uName = 'Naam';
+const Id = 1000003;
+let isactive = true;
+
+function printer(userName, uId, isEnabled) {
+    return (
+        'user name:' + userName +
+        ' user id:' + uId +
+        ' is active:' + isEnabled
+    );
+}
+
+
+const multi = (a, b) => a * b;
+
+//Id = 000
+
+const employee = {
+    name: 'Abhineet',
+    id: 29,
+    greet() {
+        console.log('username: ' + this.name);
+    }
+}
+
+const employees = ['pehla', 'dusra', 'ye gaya']
+
+const nextgen = [...employees]
+
+const company = (...args) => {
+    return args;
+}
+
+employee.greet();
+
+let { name, id } = employee;
+
+
+console.log(printer(uName, Id, isactive));
+console.log(multi(2, 4));
+console.log(employees);
+console.log(employees.map(emp => 'Employee: ' + emp));
+console.log(employees.pop());
+console.log(employees);
+console.log(nextgen);
+console.log(company('gametech', 'vog', 'nextgentm'));
+console.log(name, id);
+
+const fs = require('fs');
+fs.writeFileSync('hello.txt', 'chal riya hai bhiya!!');
+
+console.log('chal riya hai bhiya!!');
